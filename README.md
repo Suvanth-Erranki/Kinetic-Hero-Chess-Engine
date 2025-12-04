@@ -48,8 +48,6 @@ make clean && make
 
 The resulting executable will be located at `bin/engine`.
 
----
-
 ## Usage
 
 Run the engine from the terminal:
@@ -62,8 +60,6 @@ The engine can be used standalone or integrated with UCI-compatible GUIs. Availa
 
 - `search(TL)` — fixed-time search in milliseconds.
 - `search(wtime, btime, winc, binc)` — search based on player clocks and increments.
-
----
 
 ## How It Works
 
