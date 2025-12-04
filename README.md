@@ -42,7 +42,6 @@ Kinetic Hero is a lightweight and highly efficient chess engine written in C++23
 - Multithreaded MCTS search
 - Try MCTS variants (progressive bias, RAVE, virtual loss)
 - Train Policy and Value network weights (currently use Apple Silicon M2, rendering GPU training problematic) 
-- Improve leaf evaluation (material + positional heuristics)
 - Optimize memory usage and speed (tree, moves, priors)
 - Add to Lichess (need to figure out hosting)
 
@@ -96,7 +95,7 @@ The engine can be used standalone or integrated with UCI-compatible GUIs. Availa
 - Original code written by Suvanth.
 - Thank you to Google Deepmind's AlphaZero papers and Sebastian Lague's Chess Engine videos for inspiring me so long ago!
 - Thank you to Chess Programming Wiki for being such a helpful resource (e.g. Magic Bitboards).
-- Thank you to the Engine Programming Discord for answering some of questions.
+- Thank you to the Engine Programming Discord for answering some of my questions.
 
 ## License
 
