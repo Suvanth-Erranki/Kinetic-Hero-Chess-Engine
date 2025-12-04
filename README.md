@@ -32,8 +32,7 @@ Kinetic Hero is a lightweight and highly efficient chess engine written in moder
 The default compilation uses `clang`, but it is replacable with `g++`.
 
 ```
-make       # Build the engine
-make clean # Clean compiled files
+make clean && make
 ```
 
 The resulting executable will be located at `bin/engine`.
