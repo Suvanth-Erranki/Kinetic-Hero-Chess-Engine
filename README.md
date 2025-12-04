@@ -2,28 +2,39 @@
 
 Kinetic Hero is a lightweight and highly efficient chess engine written in C++23, utilizing advanced move generation and Monte Carlo Tree Search (MCTS)–style decision making. 
 
----
-
 ## Features
 
-- **Bitboard Representation**  
-  Efficiently tracks pieces, attacks, and board state for both colors using 64-bit integers.
+- **Board Representation**
+   - Efficient representation of chess positions in `board.h`.
+   - Supports move generation, legality checks, and move execution/unexecution.
 
-- **FEN Parsing**  
-  Load and export positions using Forsyth–Edwards Notation (FEN).
+- **Monte Carlo Tree Search (MCTS)**
+   - Implemented in `search.h`.
+   - Uses **PUCT (Predictor + Upper Confidence bound applied to Trees)** to balance exploration and exploitation.
+   - Maintains visit counts (`N`) and accumulated scores (`score`) at each node.
+   - Expands leaf nodes and filters out illegal moves.
+   - Uses policy priors from `policy.h` to guide move selection.
 
-- **Comprehensive Move Generation**  
-  - Handles all standard chess rules: castling, en passant, promotions.  
-  - Supports checks, pins, and double-check scenarios.  
-  - Generates legal moves with filtering for illegal positions.
+- **High-Performance Optimizations**
+   - Preallocated memory pools for nodes and moves to avoid dynamic allocation overhead.
+   - In-place filtering of illegal moves during expansion.
+   - Fast integer square root function used for exploration term computation.
+   - Designed to explore millions of positions efficiently.
 
-- **Search and Evaluation**  
-  - MCTS-style search with PUCT-based move selection.  
-  - Lightweight evaluation function for assessing positions.  
-  - Supports both fixed-time and time-control-based search.
+- **Time-Controlled Search**
+   - Supports fixed-time search (`search(int TL)`).
+   - Supports chess clock-aware search (`search(int wtime, int btime, int winc, int binc)`).
+   
+- **Evaluation (WIP)**
+   - `eval.h` contains position evaluation functions.
+   - Can be replaced with a neural network-based evaluator for stronger play.
 
-- **Flexible Timing**  
-  Allows searches constrained by either a fixed number of milliseconds or a time control with increments.
+- **Policy Network (WIP)**
+   - Generates move priors to bias MCTS towards promising moves.
+   - Supports integration with external policy models.
+   
+- **Debugging and Info**
+   - Outputs node count, speed (nodes per second), and optionally detailed move statistics.
   
 ---
 
