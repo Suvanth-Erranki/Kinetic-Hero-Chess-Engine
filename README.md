@@ -24,30 +24,12 @@ Kinetic Hero is a lightweight and highly efficient chess engine written in moder
 
 - **Flexible Timing**  
   Allows searches constrained by either a fixed number of milliseconds or a time control with increments.
-
----
-
-## Project Structure
-
-```
-.
-├── src/
-│   ├── board.h       # Board representation, move generation, FEN handling
-│   ├── eval.h        # Position evaluation
-│   ├── policy.h      # Policy priors for search
-│   ├── search.h      # Search algorithms and tree management
-│   └── main.cpp      # Entry point for UCI or CLI interaction
-├── build/            # Object files generated during compilation
-├── bin/              # Compiled engine binary
-├── Makefile          # Build automation
-└── README.md         # Project overview
-```
-
+  
 ---
 
 ## Building
 
-Ensure you have a C++2b–compatible compiler (tested with `clang++`):
+The default compilation uses `clang`, but it is replacable with `g++`.
 
 ```
 make       # Build the engine
