@@ -35,7 +35,16 @@ Kinetic Hero is a lightweight and highly efficient chess engine written in C++23
    
 - **Debugging and Info**
    - Outputs node count, speed (nodes per second), and optionally detailed move statistics.
-  
+
+## Todo:
+
+- Add Zobrist hashing and 3-fold repetition/draw detection
+- Multithreaded MCTS search
+- Try MCTS variants (progressive bias, RAVE, virtual loss)
+- Train Policy and Value network weights (currently use Apple Silicon M2, rendering GPU training problematic) 
+- Improve leaf evaluation (material + positional heuristics)
+- Optimize memory usage and speed (tree, moves, priors)
+
 ---
 
 ## Building
