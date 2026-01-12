@@ -1,6 +1,8 @@
 # Kinetic Hero
 Kinetic Hero is a lightweight and highly efficient chess engine written in C++23, utilizing advanced move generation and Monte Carlo Tree Search (MCTS)–style decision making. 
 
+Most recently published version: 2025-12-04.
+
 ## Features
 
 - **Board Representation**
